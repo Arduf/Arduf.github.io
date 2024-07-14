@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Thawatchai Sroipho - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- content font -->
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Notable&display=swap" rel="stylesheet">
-    <!-- head font -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <style>
         .darker-grotesque {
@@ -19,7 +16,13 @@
           font-optical-sizing: auto;
           font-weight: 400;
           font-style: normal;
-          font-size: 22px;
+          font-size: 18px;
+        }
+
+        @media (min-width: 768px) {
+          .darker-grotesque {
+            font-size: 22px;
+          }
         }
 
         .dm-serif-text-regular {
@@ -33,7 +36,12 @@
         }
         .nav-container {
             background-color: #A34343;
+            padding: 1rem 0;
+        }
+        @media (min-width: 768px) {
+          .nav-container {
             padding: 2rem 0;
+          }
         }
         .nav-link, .btn-container span {
             color: white;
@@ -44,8 +52,13 @@
         }
         .btn-container span {
             cursor: pointer;
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
+        }
+        @media (min-width: 768px) {
+          .btn-container span {
+            font-size: 3rem;
+          }
         }
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -75,18 +88,17 @@
             color: white;
         }
 
-        /* Open offcanvas */
         .offcanvas-center {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80%; /* Increased width */
-            max-width: 1200px; /* Added max-width for larger screens */
-            height: 90vh; /* Set height to 80% of viewport height */
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
             background-color: white;
             z-index: 1050;
-            overflow-y: auto; /* Added scrolling for overflow content */
+            overflow-y: auto;
         }
 
         .offcanvas-backdrop-center {
@@ -99,25 +111,35 @@
             z-index: 1040;
         }
 
-        /* Adjust card image size */
         .offcanvas-body .card-img-top {
-            max-height: 1500px;
+            max-height: 300px;
             object-fit: contain;
+        }
+        @media (min-width: 768px) {
+          .offcanvas-body .card-img-top {
+            max-height: 500px;
+          }
         }
         .fullscreen-container {
             width: 100%;
-            height: 100vh;
+            height: auto;
             overflow: hidden;
         }
         .fullscreen-row {
             display: flex;
             flex-wrap: wrap;
-            height: 100%;
         }
         .fullscreen-col {
+            flex: 1 0 100%;
+            max-width: 100%;
+            height: 200px;
+        }
+        @media (min-width: 768px) {
+          .fullscreen-col {
             flex: 1 0 50%;
             max-width: 50%;
-            height: 50%;
+            height: 300px;
+          }
         }
         .fullscreen-card {
             width: 100%;
@@ -129,16 +151,14 @@
             object-fit: cover;
         }
         .card-img-top {
-          height: 400px;
+          height: 200px;
           object-fit: contain;
           padding: 1rem;
         }
-        @media (max-width: 768px) {
-            .fullscreen-col {
-                flex: 1 0 100%;
-                max-width: 100%;
-                height: 25%;
-            }
+        @media (min-width: 768px) {
+          .card-img-top {
+            height: 400px;
+          }
         }
         .btn-custom {
           background-color: #A34343;
@@ -152,7 +172,7 @@
         <div class="container">
             <div class="d-flex justify-content-center">
                 <div class="btn-container animate__animated animate__slideInDown dm-serif-text-regular">
-                    <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" style="font-size: 72px;">THAWATCHAI SROIPHO</span>
+                    <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" class="text-center">THAWATCHAI SROIPHO</span>
                 </div>
             </div>
         </div>
@@ -166,7 +186,7 @@
         </div>
         <div class="offcanvas-body">
           <div class="container">
-              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
                 <div class="col">
                   <a href="Google Ads.html" class="text-decoration-none">
                     <div class="card h-100 learning-card animate__animated animate__fadeInUp">
@@ -214,27 +234,27 @@
 
     <!-- Certificate -->
     <section class="container my-5 darker-grotesque animate__animated animate__fadeInRight">
-        <h2 class="section-title text-center" style="font-size: 48px;">Certification</h2>
-        <div class="card mb-3 p-5 rounded-4">
+        <h2 class="section-title text-center fs-1">Certification</h2>
+        <div class="card mb-3 p-3 p-md-5 rounded-4">
             <div class="row g-0 align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 mb-3 mb-md-0">
                     <img src="SEO_training.jpg" class="img-fluid rounded-start" alt="SEO Training Certificate">
                 </div>
                 <div class="col-md-6">
                     <div class="card-body">
-                        <h3 class="card-title fw-bolder" style="text-align: right;">The Ultimate SEO Training 2024 + SEO For WordPress Websites</h3>
-                        <p class="card-text mt-4" style="text-align: justify;">I have gained extensive knowledge in SEO, understanding how it works and how to effectively implement it. I can structure and optimize websites to achieve top rankings on search engine results pages. My training includes strategies used by London's leading SEO agency, equipping me with the skills to identify and target the best keywords for any website. I can analyze competitors' keyword strategies and discover numerous content ideas for blogs. I am proficient in building high-quality SEO backlinks that significantly impact rankings. I have mastered technical SEO to outsmart competitors and know how to use internal links to rank highly for competitive keywords. Additionally, I am equipped to handle negative SEO attacks, ensuring sustained and positive search engine performance.</p>
+                        <h3 class="card-title fw-bolder text-end">The Ultimate SEO Training 2024 + SEO For WordPress Websites</h3>
+                        <p class="card-text mt-4 text-justify">I have gained extensive knowledge in SEO, understanding how it works and how to effectively implement it. I can structure and optimize websites to achieve top rankings on search engine results pages. My training includes strategies used by London's leading SEO agency, equipping me with the skills to identify and target the best keywords for any website. I can analyze competitors' keyword strategies and discover numerous content ideas for blogs. I am proficient in building high-quality SEO backlinks that significantly impact rankings. I have mastered technical SEO to outsmart competitors and know how to use internal links to rank highly for competitive keywords. Additionally, I am equipped to handle negative SEO attacks, ensuring sustained and positive search engine performance.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <hr style="margin-top: 10%;">
+    <hr class="my-5">
 
     <!-- Writing -->
     <section class="container my-5 darker-grotesque animate__animated animate__fadeInRight">
-      <h2 class="section-title text-center" style="font-size: 48px;">My Writing</h2>
+      <h2 class="section-title text-center fs-1">My Writing</h2>
       <div class="row row-cols-1 row-cols-md-2 g-4">
           <div class="col">
               <div class="card text-bg-dark image-card">
@@ -269,32 +289,32 @@
               </div>
           </div>
       </div>
-  </section>
+    </section>
 
-    <hr style="margin-top: 10%;">
+    <hr class="my-5">
 
     <!-- Knowledge -->
     <section class="container-fluid bg-light py-5 darker-grotesque animate__animated animate__fadeInRight">
         <div class="container">
-            <h2 class="section-title text-center" style="font-size: 48px;">My Knowledge</h2>
+            <h2 class="section-title text-center fs-1">My Knowledge</h2>
             <div class="row align-items-center">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3 mb-md-0">
                     <img src="Structure_SEO.png" class="img-fluid rounded-4" alt="SEO Structure">
                 </div>
-                <div class="col-md-8 p-5">
+                <div class="col-md-8">
                     <div class="bg-white p-4 rounded-4 shadow">
                         <h3 class="mb-3 fw-bolder">SEO & Content Marketing Expertise</h3>
-                        <p style="text-align: justify;">I applied the SEO for WordPress Training and Content Marketing for Business courses. I aimed to enhancing website ranking on search result pages. My knowledge includes keyword research and analysis, on-page optimization, content creation, and link-building strategies, etc. I'm using SEO tools such as Google Analytics, Google Search Console, Google Tag Manager, Google Keyword Planner, and SEMrush to optimize websites and implement data strategies. Moreover, my coding skills can improve the UX/UI for users, including mobile-friendliness, website speed, etc.</p>
+                        <p class="text-justify">I applied the SEO for WordPress Training and Content Marketing for Business courses. I aimed to enhancing website ranking on search result pages. My knowledge includes keyword research and analysis, on-page optimization, content creation, and link-building strategies, etc. I'm using SEO tools such as Google Analytics, Google Search Console, Google Tag Manager, Google Keyword Planner, and SEMrush to optimize websites and implement data strategies. Moreover, my coding skills can improve the UX/UI for users, including mobile-friendliness, website speed, etc.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <hr style="margin-top: 10%; margin-bottom: 10%;">
+    <hr class="my-5">
 
     <!-- Open Source Data Experiment -->
-    <section class="mb-5">
+    <section class="container mb-5">
       <div class="card">
         <div class="card-header text-black fw-bolder">
           Open Source Data Experiment
@@ -302,18 +322,18 @@
         <div class="card-body">
           <h5 class="card-title">Website Analytics Yearly Page Views</h5>
           <p class="card-text">This open data was used to experiment while learning SEO session. Here is the URL of opendata <a href="https://opendata.dc.gov/datasets/DCGIS::website-analytics-yearly-page-views/explore" target="_blank">https://opendata.dc.gov/datasets/DCGIS::website-analytics-yearly-page-views/explore</a></p>
-          <div class="d-grid gap-2 col-3 mx-auto">
+          <div class="d-grid gap-2 col-md-3 mx-auto">
             <button class="btn btn-custom" type="button" onclick="location.href='GA4 dataset.html';">Open Data Analysis</button>
           </div>
         </div>
       </div>
     </section>
 
-    <hr style="margin-top: 10%; margin-bottom: 10%;">
+    <hr class="my-5">
 
     <!-- Assistance Tools -->
     <section class="container my-5 darker-grotesque animate__animated animate__fadeInRight">
-        <h2 class="section-title text-center" style="font-size: 48px;">Assistance Tools</h2>
+        <h2 class="section-title text-center fs-1">Assistance Tools</h2>
         <div class="fullscreen-container">
             <div class="fullscreen-row">
                 <div class="fullscreen-col">
@@ -357,17 +377,17 @@
         <div class="container">
           <section class="mt-1">
             <div class="row text-center d-flex justify-content-center pt-5">
-              <div class="col-md-2">
+              <div class="col-md-4 col-lg-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
                   <a href="Coding.html" class="text-white">Coding Page</a>
                 </h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-md-4 col-lg-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
                   <a href="Google Ads.html" class="text-white">Google Ads</a>
                 </h6>
               </div>
-              <div class="col-md-2">
+              <div class="col-md-4 col-lg-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
                   <a href="https://thasro.dreamhosters.com/?page_id=1046" class="text-white">WordPress Page</a>
                 </h6>
@@ -414,8 +434,8 @@
                 <img src="GA4.png" class="card-img-top" alt="Google Analytics 4">
                 <div class="card-body">
                     <h5 class="card-title text-black text-center">Google Analytics (GA4)</h5>
-                    <p class="card-text" style="text-align: justify;">Website tracking tool that use for report website traffic. I used the feature that creating custom dashboards and reports to track user engagement, traffic sources, and conversion rates. It can help understand different group of the user behavier to optimize which website have low user experiences that help to improve marketing strategiesand optimizing user experience. Additionally, I used the explorations in Google analytic to customize the data insight that can demonstrate the specific data report.</p>
-                    <p style="text-align: justify;">I was sync campaign of the Google Ads to Google analytic to tracking all of traffic when the user have interacted with my Ad. I used Google Analytic track my A/B testing ad to analyzed each data which testing is better performing.</p>
+                    <p class="card-text text-justify">Website tracking tool that use for report website traffic. I used the feature that creating custom dashboards and reports to track user engagement, traffic sources, and conversion rates. It can help understand different group of the user behavier to optimize which website have low user experiences that help to improve marketing strategiesand optimizing user experience. Additionally, I used the explorations in Google analytic to customize the data insight that can demonstrate the specific data report.</p>
+                    <p class="text-justify">I was sync campaign of the Google Ads to Google analytic to tracking all of traffic when the user have interacted with my Ad. I used Google Analytic track my A/B testing ad to analyzed each data which testing is better performing.</p>
                 </div>
             </div>
         `);
@@ -424,10 +444,10 @@
     document.getElementById('card2').addEventListener('click', function() {
         openOffcanvas(`
             <div class="card mb-3">
-                <img src="GSC_Shot.png" alt="Google Search Console">
+                <img src="GSC_Shot.png" class="card-img-top" alt="Google Search Console">
                 <div class="card-body">
                     <h5 class="card-title text-black text-center">Google Search Console (GSC)</h5>
-                    <p class="card-text" style="text-align: justify;">I used Google Search console for monitoring, maintaining, and sorlving the issue of my website. During I creating my website,  I will consider the structure and make it easily to indexing by Google. Therefore, If I ensure my sitemap have the understandable to indexing of Google then, submitting sitemap to Google Search Console. It can be used for analyze the search performance data, including clicks, impressions, and average position, to understand how user interact with search results and identify opportunities for improvement. Additionally,  I also used the tool to manage website security by addressing issue from my website to solving correctly point.</p>
+                    <p class="card-text text-justify">I used Google Search console for monitoring, maintaining, and sorlving the issue of my website. During I creating my website,  I will consider the structure and make it easily to indexing by Google. Therefore, If I ensure my sitemap have the understandable to indexing of Google then, submitting sitemap to Google Search Console. It can be used for analyze the search performance data, including clicks, impressions, and average position, to understand how user interact with search results and identify opportunities for improvement. Additionally,  I also used the tool to manage website security by addressing issue from my website to solving correctly point.</p>
                 </div>
             </div>
         `);
@@ -438,7 +458,7 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title text-black text-center">Google Tag Manager (GTM)</h5>
-                    <p class="card-text" style="text-align: justify;">The tool for managing marketing tags on a website without requiring code change in my website. I have performed includes setting up and configuring Google Tag Manager accounts, mange tags, triggers, and tracking implementation. I was created tags to my blogpost to monitoring engage view, Javascript error, form submission and issues, etc. I applied tag to my conversion ad then, I setup trigger to form submission to receiving valuable insight from user interactions and conversion rate.</p>
+                    <p class="card-text text-justify">The tool for managing marketing tags on a website without requiring code change in my website. I have performed includes setting up and configuring Google Tag Manager accounts, mange tags, triggers, and tracking implementation. I was created tags to my blogpost to monitoring engage view, Javascript error, form submission and issues, etc. I applied tag to my conversion ad then, I setup trigger to form submission to receiving valuable insight from user interactions and conversion rate.</p>
                 </div>
             </div>
         `);
@@ -447,10 +467,10 @@
     document.getElementById('card4').addEventListener('click', function() {
         openOffcanvas(`
             <div class="card mb-3">
-                <img src="YOAST.Shot.png" alt="Yoast SEO">
+                <img src="YOAST.Shot.png" class="card-img-top" alt="Yoast SEO">
                 <div class="card-body">
                     <h5 class="card-title text-black text-center">Yoast SEO</h5>
-                    <p class="card-text" style="text-align: justify;">Yoast SEO works can providing me the on-page optimization features, including keyword analysis, readability checks, and metadata management. I used Yoast SEO to ensure each page and post on my website is optimized for target keywords by following the plugin's recommendations for keyword density, meta descriptions, and internal linking. I used Yoast SEO features to generating XML sitemap with every my webpages and also provide me the information if my website have duplicate content issues.</p>
+                    <p class="card-text text-justify">Yoast SEO works can providing me the on-page optimization features, including keyword analysis, readability checks, and metadata management. I used Yoast SEO to ensure each page and post on my website is optimized for target keywords by following the plugin's recommendations for keyword density, meta descriptions, and internal linking. I used Yoast SEO features to generating XML sitemap with every my webpages and also provide me the information if my website have duplicate content issues.</p>
                 </div>
             </div>
         `);
