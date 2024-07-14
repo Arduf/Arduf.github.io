@@ -74,15 +74,21 @@
             background-color: #A34343;
             color: white;
         }
+
+        /* Open offcanvas */
         .offcanvas-center {
-            max-width: 800px;
-            width: 90%;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 1056;
+            width: 80%; /* Increased width */
+            max-width: 1200px; /* Added max-width for larger screens */
+            height: 90vh; /* Set height to 80% of viewport height */
+            background-color: white;
+            z-index: 1050;
+            overflow-y: auto; /* Added scrolling for overflow content */
         }
+
         .offcanvas-backdrop-center {
             position: fixed;
             top: 0;
@@ -90,7 +96,13 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1055;
+            z-index: 1040;
+        }
+
+        /* Adjust card image size */
+        .offcanvas-body .card-img-top {
+            max-height: 1500px;
+            object-fit: contain;
         }
         .fullscreen-container {
             width: 100%;
@@ -128,6 +140,10 @@
                 height: 25%;
             }
         }
+        .btn-custom {
+          background-color: #A34343;
+          color: white;
+        }
     </style>
 </head>
 <body>
@@ -149,42 +165,50 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                    <div class="col">
-                        <div class="card h-100 learning-card animate__animated animate__fadeInUp">
-                            <img src="https://zeevector.com/wp-content/uploads/Google-Ads-Logo-Transparent.png" class="card-img-top p-3" alt="Google Ads logo">
-                            <div class="card-body">
-                                <h5 class="card-title darker-grotesque">Google Advertisement</h5>
-                            </div>
-                        </div>
+          <div class="container">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                  <a href="Google Ads.html" class="text-decoration-none">
+                    <div class="card h-100 learning-card animate__animated animate__fadeInUp">
+                      <img src="https://zeevector.com/wp-content/uploads/Google-Ads-Logo-Transparent.png" class="card-img-top p-3" alt="Google Ads logo">
+                      <div class="card-body">
+                        <h5 class="card-title darker-grotesque">Google Advertisement</h5>
+                      </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100 learning-card animate__animated animate__fadeInUp animate__delay-1s">
-                            <img src="https://thumbs.dreamstime.com/b/html-css-js-icon-set-web-development-logo-icon-set-html-css-javascript-programming-symbol-html-css-js-icon-set-web-178080904.jpg" class="card-img-top p-3" alt="HTML, CSS, and JavaScript logos">
-                            <div class="card-body">
-                                <h5 class="card-title darker-grotesque">HTML CSS JS</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100 learning-card animate__animated animate__fadeInUp animate__delay-2s">
-                            <img src="https://www.cogdigital.com.au/wp-content/uploads/2023/07/SEO-AGENCY-SYDNEY-COG-DIGITAL.png" class="card-img-top p-3" alt="SEO illustration">
-                            <div class="card-body">
-                                <h5 class="card-title darker-grotesque">Search Engine Optimization</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100 learning-card animate__animated animate__fadeInUp animate__delay-3s">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/2048px-WordPress_blue_logo.svg.png" class="card-img-top p-3" alt="WordPress logo">
-                            <div class="card-body">
-                                <h5 class="card-title darker-grotesque">WordPress</h5>
-                            </div>
-                        </div>
-                    </div>
+                  </a>
                 </div>
-            </div>
+                <div class="col">
+                  <a href="Coding.html" class="text-decoration-none">
+                    <div class="card h-100 learning-card animate__animated animate__fadeInUp animate__delay-1s">
+                      <img src="https://thumbs.dreamstime.com/b/html-css-js-icon-set-web-development-logo-icon-set-html-css-javascript-programming-symbol-html-css-js-icon-set-web-178080904.jpg" class="card-img-top p-3" alt="HTML, CSS, and JavaScript logos">
+                      <div class="card-body">
+                        <h5 class="card-title darker-grotesque">HTML CSS JS</h5>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="SEO.html" class="text-decoration-none">
+                    <div class="card h-100 learning-card animate__animated animate__fadeInUp animate__delay-2s">
+                      <img src="https://www.cogdigital.com.au/wp-content/uploads/2023/07/SEO-AGENCY-SYDNEY-COG-DIGITAL.png" class="card-img-top p-3" alt="SEO illustration">
+                      <div class="card-body">
+                        <h5 class="card-title darker-grotesque">Search Engine Optimization</h5>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="https://thasro.dreamhosters.com/?page_id=1046" class="text-decoration-none">
+                    <div class="card h-100 learning-card animate__animated animate__fadeInUp animate__delay-3s">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/2048px-WordPress_blue_logo.svg.png" class="card-img-top p-3" alt="WordPress logo">
+                      <div class="card-body">
+                        <h5 class="card-title darker-grotesque">WordPress</h5>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+          </div>
         </div>
     </div>
 
@@ -267,7 +291,25 @@
         </div>
     </section>
 
-    <hr style="margin-top: 10%;">
+    <hr style="margin-top: 10%; margin-bottom: 10%;">
+
+    <!-- Open Source Data Experiment -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header text-black fw-bolder">
+          Open Source Data Experiment
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Website Analytics Yearly Page Views</h5>
+          <p class="card-text">This open data was used to experiment while learning SEO session. Here is the URL of opendata <a href="https://opendata.dc.gov/datasets/DCGIS::website-analytics-yearly-page-views/explore" target="_blank">https://opendata.dc.gov/datasets/DCGIS::website-analytics-yearly-page-views/explore</a></p>
+          <div class="d-grid gap-2 col-3 mx-auto">
+            <button class="btn btn-custom" type="button" onclick="location.href='GA4 dataset.html';">Open Data Analysis</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr style="margin-top: 10%; margin-bottom: 10%;">
 
     <!-- Assistance Tools -->
     <section class="container my-5 darker-grotesque animate__animated animate__fadeInRight">
@@ -313,23 +355,25 @@
     <!-- Footer -->
     <footer class="text-white py-5 darker-grotesque animate__animated animate__fadeInRight">
         <div class="container">
-            <div class="row text-center d-flex justify-content-center">
-                <div class="col-md-4">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!" class="text-white">Coding Page</a>
-                    </h6>
-                </div>
-                <div class="col-md-4">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!" class="text-white">SEO Page</a>
-                    </h6>
-                </div>
-                <div class="col-md-4">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!" class="text-white">WordPress Page</a>
-                    </h6>
-                </div>
+          <section class="mt-1">
+            <div class="row text-center d-flex justify-content-center pt-5">
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="Coding.html" class="text-white">Coding Page</a>
+                </h6>
+              </div>
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="SEO.html" class="text-white">SEO Page</a>
+                </h6>
+              </div>
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="https://thasro.dreamhosters.com/?page_id=1046" class="text-white">WordPress Page</a>
+                </h6>
+              </div>
             </div>
+          </section>
             <hr class="my-5" />
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
