@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Notable&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <!-- head font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
         .darker-grotesque {
           font-family: "Darker Grotesque", sans-serif;
@@ -25,11 +26,11 @@
           }
         }
 
-        .dm-serif-text-regular {
-          font-family: "DM Serif Text", serif;
-          font-weight: 400;
-          font-style: normal;
-        }
+        .dm-serif-display-regular-italic {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-style: italic;
+      }
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f8f9fa;
@@ -100,7 +101,12 @@
             z-index: 1050;
             overflow-y: auto;
         }
-
+        .offcanvas-title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          color: #333;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
         .offcanvas-backdrop-center {
             position: fixed;
             top: 0;
@@ -171,7 +177,7 @@
     <nav class="nav-container">
         <div class="container">
             <div class="d-flex justify-content-center">
-                <div class="btn-container animate__animated animate__slideInDown dm-serif-text-regular">
+                <div class="btn-container animate__animated animate__slideInDown dm-serif-display-regular-italic">
                     <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" class="text-center">THAWATCHAI SROIPHO</span>
                 </div>
             </div>
@@ -243,7 +249,8 @@
                 <div class="col-md-6">
                     <div class="card-body">
                         <h3 class="card-title fw-bolder text-end">The Ultimate SEO Training 2024 + SEO For WordPress Websites</h3>
-                        <p class="card-text mt-4 text-justify">I have gained extensive knowledge in SEO, understanding how it works and how to effectively implement it. I can structure and optimize websites to achieve top rankings on search engine results pages. My training includes strategies used by London's leading SEO agency, equipping me with the skills to identify and target the best keywords for any website. I can analyze competitors' keyword strategies and discover numerous content ideas for blogs. I am proficient in building high-quality SEO backlinks that significantly impact rankings. I have mastered technical SEO to outsmart competitors and know how to use internal links to rank highly for competitive keywords. Additionally, I am equipped to handle negative SEO attacks, ensuring sustained and positive search engine performance.</p>
+                        <p class="card-text mt-4" style="text-align: justify;">I've gained deep knowledge in SEO, understanding its workings and effective implementation. I can optimize websites to achieve top search engine rankings. I also learned how to identify and target the best keywords for any site. I can analyze competitors' keyword strategies and generate numerous blog content ideas.</p>
+                        <p class="card-text mt-4" style="text-align: justify;">My SEO skills cover website structuring, competitor analysis, content ideation, backlink building, technical optimization, and defensive strategies against negative SEO. This comprehensive knowledge allows me to develop and implement effective SEO strategies for various websites and business needs.</p>
                     </div>
                 </div>
             </div>
